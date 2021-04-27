@@ -1,0 +1,82 @@
+*
+{
+	font-family: Calibri, sans-serif, Arial, Times;
+	border: 0px red solid;
+}
+
+body
+{
+	font-family: tahoma, arial, verdana, sans-serif;
+	line-height: 1.2em;
+	background-color: #ffffff;
+	margin-top: 0.5em;
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+}
+
+h1
+{
+	font-family: tahoma, arial, verdana, sans-serif;
+	color: #707;
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+img.float-right-icon
+{
+	width: 100px;
+	float: right;
+}
+
+h2
+{
+	font-family: tahoma, arial, verdana, sans-serif;
+	color: #808;
+	font-size: 17px;
+	line-height: 1.5em;
+	margin-top: 1.5em;
+	padding-left: 0.2em;
+	border: 0px solid #000000;
+}
+
+hr
+{
+	color: #808;
+	height: 3px;
+	border: 1px solid #808;
+	background: #808;
+	margin: 0.5em 0 1em;
+}
+
+p
+{
+	margin-left: 5px;
+}
+
+table
+{
+	width: 100%;
+	border: 0px black solid;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+}
+
+img.project_icon
+{
+	border: 1px black solid;
+	margin-right: 0.5em;
+	width: 250px;
+}
+
+a:link {  color: #960039; text-decoration: none}
+a:visited {  color: #960039; text-decoration: none}
+a:hover {  color: #ffc82e; text-decoration: none}
+a:active { color: #CC9933 }
+
+table.projects td
+{
+	vertical-align: top;
+}
