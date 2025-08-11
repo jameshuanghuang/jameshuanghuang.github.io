@@ -1,0 +1,288 @@
+/* Crypto Dark Mode CSS - Cyberpunk Vibe */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #00ff88;
+    font-family: 'Rajdhani', monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Cyber Grid Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation */
+.nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff0080, #00ff88);
+    color: #000;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-toggle:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
+    transform: scale(1.05);
+    color: #000;
+    text-decoration: none;
+}
+
+/* Section Styling */
+.section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.section h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2em;
+    color: #00ccff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+    flex-shrink: 0;
+}
+
+.profile-info h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8em;
+    color: #ff0080;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.project-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-gallery::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00ff88, #00ccff);
+    border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #00ccff, #ff0080);
+}
+
+.project-block {
+    min-width: 280px;
+    max-width: 280px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid #00ff88;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.project-block:hover::before {
+    left: 100%;
+}
+
+.project-block:hover {
+    border-color: #00ccff;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(0, 204, 255, 0.1);
+}
+
+.project-block h4 {
+    font-family: 'Orbitron', monospace;
+    color: #00ccff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.project-block p {
+    color: #00ff88;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Project Canvas */
+.canvas-container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.canvas-display {
+    min-height: 600px;
+    position: relative;
+}
+
+.project-demo {
+    display: none;
+    padding: 30px;
+    height: 100%;
+}
+
+.project-demo.active {
+    display: block;
+}
+
+.canvas-placeholder {
+    text-align: center;
+    padding: 100px 20px;
+    color: #00ccff;
+}
+
+.canvas-placeholder h3 {
+    font-family: 'Orbitron', monospace;
+    color: #00ff88;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.canvas-placeholder p {
+    color: #888;
+    font-size: 1.1em;
+}
+
+/* Links */
+a {
+    color: #00ccff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #00ff88;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .project-gallery {
+        gap: 15px;
+    }
+    
+    .project-block {
+        min-width: 250px;
+        max-width: 250px;
+    }
+    
+    .canvas-display {
+        min-height: 500px;
+    }
+    
+    .project-demo {
+        padding: 20px;
+    }
+}

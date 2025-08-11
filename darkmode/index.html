@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Huang Homepage</title>
+    <link rel="stylesheet" href="./dark.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="../images/pyh.ico">
+    <meta name="description" content="James Huang" />
+    <meta property="og:title" content="James Huang"/>
+    <meta property="og:description" content="Advanced trading strategies and backtesting systems by James Huang" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://jameshuanghuang.github.io/darkmode/"/>
+    <meta property="og:image" content="https://jameshuanghuang.github.io/images/photo-dark.png"/>
+    <meta property="og:site_name" content="James Huang" />
+</head>
+
+<body>
+    <!-- Navigation Toggle -->
+    <a href="../index.html" class="nav-toggle">⚡ Light Mode</a>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="section">
+            <div class="profile">
+                <img src="../images/photo-dark.png" alt="James Huang" class="profile-img">
+                <div class="profile-info">
+                    <h3>Financial Engineer</h3>
+                    <p>Interested in fintech and cryptocurrency</p>
+                    <div class="social-links">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Gallery -->
+        <div class="section">
+            <h2>◤ Algorithmic trading and simulation tricks ◢</h2>
+            <div class="project-gallery">
+                <div class="project-block" onclick="showProject('project-demo-1')">
+                    <h4>Buy & hold BTC - ROI 198%</h4>
+                    <p>Periodically DCA into Bitcoin starting August 2021</p>
+                </div>
+                <div class="project-block" onclick="showProject('project-demo-2')">
+                    <h4>Buy & hold SPY - ROI 31%</h4>
+                    <p>Periodically DCA into SPY starting August 2021</p>
+                </div>
+                <div class="project-block" onclick="showProject('project-demo-3')">
+                    <h4>Buy BTC on dip - ROI 253%</h4>
+                    <p>Using Bollinger Bands 30 and Bi-Weekly RSI 30 with 5% stop-loss to identify potential buy signals for BTC starting August 2021</p>
+                </div>
+                <div class="project-block" onclick="showProject('project-demo-4')">
+                    <h4>Buy SPY on dip - ROI 69%</h4>
+                    <p>Using Bollinger Bands 30 and Bi-Weekly RSI 40 with 20% stop-loss to identify potential buy signals for SPY starting August 2021</p>
+                </div>
+                <div class="project-block" onclick="showProject('project-demo-5')">
+                    <h4>Asian Option Pricing Benchmarking</h4>
+                    <p>Compared different variance reduction techniques (Antithetic Variates, Sobol, Brownian Bridge)</p>
+                </div>
+                <div class="project-block" onclick="showProject('project-demo-6')">
+                    <h4>Brownian Bridge MC Simulation</h4>
+                    <p>Sample Path illustration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Canvas -->
+        <div class="section">
+            <h2>◤ View Demo ◢</h2>
+            
+            <div class="canvas-container">
+                <!-- Canvas Display Area -->
+                <div class="canvas-display">
+                    <!-- Default message -->
+                    <div id="default" class="project-demo active">
+                        <div class="canvas-placeholder">
+                            <h3>Select a project from the gallery above to view demo</h3>
+                            <p>Click on any project block to see its result</p>
+                        </div>
+                    </div>
+
+                    <div id="project-demo-1" class="project-demo">
+                        <iframe src="../files/project-demo-1.html" 
+                                frameborder="0" 
+                                width="100%" 
+                                height="600px"
+                                alt="demo 1.html">
+                        </iframe>
+                    </div>
+
+                    <div id="project-demo-2" class="project-demo">
+                        <iframe src="../files/project-demo-2.html" 
+                                frameborder="0" 
+                                width="100%" 
+                                height="600px"
+                                alt="demo 2.html">
+                        </iframe>
+                    </div>
+
+                    <div id="project-demo-3" class="project-demo">
+                        <iframe src="../files/project-demo-3.html" 
+                                frameborder="0" 
+                                width="100%" 
+                                height="600px"
+                                alt="demo 3.html">
+                        </iframe>
+                    </div>
+
+                    <div id="project-demo-4" class="project-demo">
+                        <iframe src="../files/project-demo-4.html" 
+                                frameborder="0" 
+                                width="100%" 
+                                height="600px"
+                                alt="demo 4.html">
+                        </iframe>
+                    </div>
+
+                    <div id="project-demo-5" class="project-demo">
+                        <img src="../files/project-demo-5.png" 
+                            alt="demo 5.png"
+                            style="width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+
+                    <div id="project-demo-6" class="project-demo">
+                        <iframe src="../files/project-demo-6.gif" 
+                                frameborder="0" 
+                                width="100%" 
+                                height="600px"
+                                alt="demo 6.html">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>Last system update: August 10th 2025</p>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    
+    <script>
+        function showProject(projectId) {
+            // Hide all project demos
+            const demos = document.querySelectorAll('.project-demo');
+            demos.forEach(demo => {
+                demo.classList.remove('active');
+            });
+
+            // Show selected project
+            const selectedDemo = document.getElementById(projectId);
+            if (selectedDemo) {
+                selectedDemo.classList.add('active');
+            } else {
+                // Fallback to default if project not found
+                document.getElementById('default').classList.add('active');
+            }
+        }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
