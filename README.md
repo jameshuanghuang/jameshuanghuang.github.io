@@ -1,3 +1,4 @@
 ﻿# homepage
-;)
-Visit my website: https://jameshuanghuang.github.io/
+
+Hi there, visit my website ;)
+https://jameshuanghuang.github.io/
